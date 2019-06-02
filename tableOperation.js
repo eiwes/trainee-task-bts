@@ -1,3 +1,11 @@
+window.onload = () => {
+    //add event listener to prevent the default behavior
+    const mouseOnlyNumberInputField = document.getElementById("el");
+    mouseOnlyNumberInputField.addEventListener("keypress", (event) => {
+      event.preventDefault();
+    });
+  }
+
 new Vue({
     el: '#app',
     data: {
@@ -28,6 +36,9 @@ new Vue({
                 }
             }
             this.sortBy = name; //если другой столбец выбран 
+        },
+        resize: function() {
+            size=document.getElementById("quantity");
         }
     },
 

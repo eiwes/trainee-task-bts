@@ -3,15 +3,19 @@ table {
     border-collapse: collapse;
     width: 100%;
   }
+
+  th {
+    cursor: pointer;
+  }
   
   td, th {
-    border: 1px solid #dddddd;
+    border: 1px solid lightgray;
     text-align: left;
     padding: 8px;
   }
   
   tr:nth-child(even) {
-    background-color: #dddddd;
+    background-color: #e6e6e6;
   }
 
   .myNav{
@@ -20,4 +24,24 @@ table {
 
   .myTable{
       margin-top: 2rem;
+
+  }
+
+  .myButton{
+    margin-bottom: 2rem;
+  }
+
+  .mbtn{
+    margin-left: 0.3rem;
+  }
+
+
+  .myInput{
+    margin-bottom: 2rem;
+    float: right;
+  }
+
+  .text {
+    margin-top: 0.3rem;
+    margin-right: 0.3rem;
   }

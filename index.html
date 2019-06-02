@@ -14,10 +14,30 @@
         
         
         <div  id="app" class="container myTable">
-            <button onclick="createCsv()">
-                CSV
-            </button>
-            <table>
+            <div class="row">
+                <div class="ml-1">
+                        <button type="button" onclick="createCsv()" class="myButton btn btn-outline-primary">
+                                CSV
+                        </button>
+                            
+                        <button type="button" onclick="createTsv()" class="myButton btn btn-outline-primary">
+                            TSV
+                        </button>
+                </div>
+
+                <div class="ml-auto row">
+                        <p class="text">Display rows:</p>
+                        <input type="number" value="1" min="1" :max="json.length" id="el" aria-label="Search" class="myButton form-control" style="width: 100px;" name="quantity" aria-readonly="">
+                        <button v-on:click='size = document.getElementById("el").value; countPage = Math.ceil(json.length / size);' class="mbtn myButton btn btn-outline-primary" type="button">Save</button>
+                </div>
+
+            </div>
+            
+                
+            
+
+            
+            <table id="table">
                 <thead>
                     <th @click = "sort('rank')">Rank</th>
                     <th @click = "sort('employer')">Employer</th>
